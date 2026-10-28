@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-coach-stage"
+description = "Enables the set_coach_stage command without any pre-configured scope."
+commands.allow = ["set_coach_stage"]
+
+[[permission]]
+identifier = "deny-set-coach-stage"
+description = "Denies the set_coach_stage command without any pre-configured scope."
+commands.deny = ["set_coach_stage"]

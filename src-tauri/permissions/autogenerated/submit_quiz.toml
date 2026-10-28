@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-submit-quiz"
+description = "Enables the submit_quiz command without any pre-configured scope."
+commands.allow = ["submit_quiz"]
+
+[[permission]]
+identifier = "deny-submit-quiz"
+description = "Denies the submit_quiz command without any pre-configured scope."
+commands.deny = ["submit_quiz"]

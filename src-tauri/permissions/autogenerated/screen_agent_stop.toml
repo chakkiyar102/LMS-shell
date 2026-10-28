@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-screen-agent-stop"
+description = "Enables the screen_agent_stop command without any pre-configured scope."
+commands.allow = ["screen_agent_stop"]
+
+[[permission]]
+identifier = "deny-screen-agent-stop"
+description = "Denies the screen_agent_stop command without any pre-configured scope."
+commands.deny = ["screen_agent_stop"]

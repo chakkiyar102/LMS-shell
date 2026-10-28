@@ -1,0 +1,9 @@
+id: b-course-1
+session: s1
+number: "1.1"
+title: t
+duration_min: 1
+objective: o
+video: null
+body: b
+key_points: [k]

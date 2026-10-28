@@ -1,0 +1,40 @@
+[package]
+name = "lms-shell"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A desktop LMS starter: courses, checks, certificates, an AI coach and a practice pane."
+
+[lib]
+name = "lms_shell_lib"
+# staticlib/cdylib for the Android and iOS builds
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+shared = { path = "../shared" }
+tauri = { version = "2", features = ["protocol-asset", "unstable"] }
+tauri-plugin-opener = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+rusqlite = { version = "0.32", features = ["bundled"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+uuid = { version = "1", features = ["v4"] }
+pulldown-cmark = { version = "0.12", default-features = false, features = ["html"] }
+urlencoding = "2"
+ring = "0.17"
+base64 = "0.22"
+hickory-resolver = { version = "0.24", default-features = false, features = ["system-config", "tokio-runtime"] }
+# compiled-in content: the course YAML on Android (APK resources are not on the filesystem)
+include_dir = "0.7"
+
+# desktop only: Android has no keyring backend (keys go to app-private storage) and updates come as a new APK
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-updater = "2"
+# without a native backend feature keyring silently uses an in-memory mock store
+keyring = { version = "3", features = ["apple-native", "windows-native", "linux-native"] }

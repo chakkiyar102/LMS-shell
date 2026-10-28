@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-final"
+description = "Enables the get_final command without any pre-configured scope."
+commands.allow = ["get_final"]
+
+[[permission]]
+identifier = "deny-get-final"
+description = "Denies the get_final command without any pre-configured scope."
+commands.deny = ["get_final"]

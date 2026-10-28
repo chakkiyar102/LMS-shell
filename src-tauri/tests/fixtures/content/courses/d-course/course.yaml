@@ -1,0 +1,7 @@
+id: d-course
+title: d-course
+summary: s
+shared: [base]
+sessions:
+  - {id: s1, title: t, outcome: o, lessons: [d-course-1, base-1], check: d-course-check, exercise: d-course-ex}
+assessment: d-course-as

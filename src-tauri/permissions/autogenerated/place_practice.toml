@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-place-practice"
+description = "Enables the place_practice command without any pre-configured scope."
+commands.allow = ["place_practice"]
+
+[[permission]]
+identifier = "deny-place-practice"
+description = "Denies the place_practice command without any pre-configured scope."
+commands.deny = ["place_practice"]

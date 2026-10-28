@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-open-practice"
+description = "Enables the open_practice command without any pre-configured scope."
+commands.allow = ["open_practice"]
+
+[[permission]]
+identifier = "deny-open-practice"
+description = "Denies the open_practice command without any pre-configured scope."
+commands.deny = ["open_practice"]

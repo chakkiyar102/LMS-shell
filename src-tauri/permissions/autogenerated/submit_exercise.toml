@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-submit-exercise"
+description = "Enables the submit_exercise command without any pre-configured scope."
+commands.allow = ["submit_exercise"]
+
+[[permission]]
+identifier = "deny-submit-exercise"
+description = "Denies the submit_exercise command without any pre-configured scope."
+commands.deny = ["submit_exercise"]

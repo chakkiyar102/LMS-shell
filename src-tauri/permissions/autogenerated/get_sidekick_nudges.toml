@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-sidekick-nudges"
+description = "Enables the get_sidekick_nudges command without any pre-configured scope."
+commands.allow = ["get_sidekick_nudges"]
+
+[[permission]]
+identifier = "deny-get-sidekick-nudges"
+description = "Denies the get_sidekick_nudges command without any pre-configured scope."
+commands.deny = ["get_sidekick_nudges"]

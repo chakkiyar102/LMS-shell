@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-practice-nav"
+description = "Enables the practice_nav command without any pre-configured scope."
+commands.allow = ["practice_nav"]
+
+[[permission]]
+identifier = "deny-practice-nav"
+description = "Denies the practice_nav command without any pre-configured scope."
+commands.deny = ["practice_nav"]

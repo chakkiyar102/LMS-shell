@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-sidekick-activity"
+description = "Enables the get_sidekick_activity command without any pre-configured scope."
+commands.allow = ["get_sidekick_activity"]
+
+[[permission]]
+identifier = "deny-get-sidekick-activity"
+description = "Denies the get_sidekick_activity command without any pre-configured scope."
+commands.deny = ["get_sidekick_activity"]

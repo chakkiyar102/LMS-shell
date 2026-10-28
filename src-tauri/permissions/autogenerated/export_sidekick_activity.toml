@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-export-sidekick-activity"
+description = "Enables the export_sidekick_activity command without any pre-configured scope."
+commands.allow = ["export_sidekick_activity"]
+
+[[permission]]
+identifier = "deny-export-sidekick-activity"
+description = "Denies the export_sidekick_activity command without any pre-configured scope."
+commands.deny = ["export_sidekick_activity"]

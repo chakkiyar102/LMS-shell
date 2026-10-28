@@ -1,0 +1,13 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "The local course UI.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "allow-get-courses", "allow-get-profile", "allow-save-profile", "allow-unlock-courses", "allow-has-access-code", "allow-remove-access-code", "allow-reset-app", "allow-get-course", "allow-get-lesson", "allow-save-progress", "allow-get-check", "allow-get-final",
+    "allow-submit-quiz", "allow-get-exercise", "allow-submit-exercise", "allow-get-messages", "allow-ask-tutor",
+    "allow-get-settings", "allow-save-settings", "allow-set-api-key", "allow-list-models", "allow-test-provider", "allow-get-certificate", "allow-print-certificate", "allow-open-practice", "allow-place-practice", "allow-close-practice", "allow-practice-nav", "allow-practice-tab", "allow-get-stats", "allow-check-update", "allow-download-update", "allow-apply-update", "allow-get-whats-new", "allow-mark-whats-new-seen", "allow-get-app-tour", "allow-mark-app-tour-seen", "allow-app-version", "allow-open-help", "allow-get-sidekick-nudges", "allow-get-sidekick-help", "allow-get-coach", "allow-set-coach-stage", "allow-coach-turn", "allow-screen-agent-run", "allow-screen-agent-stop", "allow-screen-agent-answer",
+    "allow-get-ai-usage", "allow-set-ai-daily-cap", "allow-get-sidekick-activity", "allow-export-sidekick-activity"
+  ]
+}

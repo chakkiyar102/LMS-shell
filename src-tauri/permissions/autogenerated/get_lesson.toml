@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-lesson"
+description = "Enables the get_lesson command without any pre-configured scope."
+commands.allow = ["get_lesson"]
+
+[[permission]]
+identifier = "deny-get-lesson"
+description = "Denies the get_lesson command without any pre-configured scope."
+commands.deny = ["get_lesson"]
