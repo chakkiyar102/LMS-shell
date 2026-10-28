@@ -1,5 +1,5 @@
 //! LLM providers. The API key lives in the OS keychain and is only ever attached here,
-//! in Rust — never handed to the UI or to the practice (page-agent) webview.
+//! in Rust, never handed to the UI or to the practice webview.
 use serde_json::{json, Value};
 use shared::{Msg, Provider};
 

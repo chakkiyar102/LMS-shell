@@ -60,7 +60,7 @@ impl App {
 
     fn lesson_context(l: &content::Lesson) -> String {
         let body: String = content::strip_media(&l.body).chars().take(6000).collect(); // hard cap; chunk if lessons grow
-        format!("Lesson {} — {}\nObjective: {}\nKey points:\n- {}\n\nLesson text:\n{body}",
+        format!("Lesson {}: {}\nObjective: {}\nKey points:\n- {}\n\nLesson text:\n{body}",
             l.number, l.title, l.objective, l.key_points.join("\n- "))
     }
 
@@ -68,7 +68,7 @@ impl App {
     fn course_context(c: &Content) -> String {
         let mut out = format!("Course: {}\n{}\n", c.course.title, c.course.summary);
         for (i, s) in c.course.sessions.iter().enumerate() {
-            out.push_str(&format!("\nSession {} — {}: {}\n", i + 1, s.title, s.outcome));
+            out.push_str(&format!("\nSession {}, {}: {}\n", i + 1, s.title, s.outcome));
             for l in s.lessons.iter().filter_map(|id| c.lessons.get(id)) {
                 out.push_str(&format!("  {} {}: {}\n", l.number, l.title, l.key_points.join(" / ")));
             }

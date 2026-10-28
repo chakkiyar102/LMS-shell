@@ -16,7 +16,7 @@ const OUT = process.argv[2];
 // the practice app the fixture pages pretend to be (fictional; routed, never fetched)
 const HOST = "notes.brightline.example";
 let fails = 0;
-const ok = (name, cond, extra = "") => { console.log(`${cond ? "PASS" : "FAIL"} ${name}${extra ? " — " + extra : ""}`); if (!cond) fails++; };
+const ok = (name, cond, extra = "") => { console.log(`${cond ? "PASS" : "FAIL"} ${name}${extra ? ": " + extra : ""}`); if (!cond) fails++; };
 
 // The widgets behave the way many web apps' do: the list renders on click, a pick writes the trigger's
 // text, the lookup filters as you type, the editor is a contenteditable with no <label for>.

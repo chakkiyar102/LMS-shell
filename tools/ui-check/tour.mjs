@@ -29,7 +29,7 @@ const shots = [];
 const want = (n) => !ONLY || n.startsWith(ONLY);
 async function shot(p, name, caption, opts = {}) {
   await p.screenshot({ path: `${OUT}/${name}.png`, ...opts });
-  shots.push(`${name}.png — ${caption}`);
+  shots.push(`${name}.png: ${caption}`);
   console.log(`${name}.png`);
 }
 const scrollPane = (p, y) => p.evaluate((y) => { const m = document.querySelector("#course-pane"); if (m) m.scrollTop = y; window.scrollTo(0, y); }, y);
