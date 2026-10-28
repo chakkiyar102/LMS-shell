@@ -1,0 +1,34 @@
+# Builds the Linux .AppImage and .deb on demand (Actions tab, Run workflow). Linux bundles link against
+# WebKitGTK, so they cannot be cross-built from macOS. Updater artifacts are off here: sign the
+# AppImage on your own machine (docs/updates.md), so the signing key never leaves it.
+name: linux
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: System libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libssl-dev libxdo-dev libdbus-1-dev
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: trunk,tauri-cli
+      - name: Build
+        working-directory: src-tauri
+        # updater artifacts need the private key; release.sh signs the AppImage instead
+        run: cargo tauri build --bundles appimage,deb --config '{"bundle":{"createUpdaterArtifacts":false}}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: |
+            target/release/bundle/appimage/*.AppImage
+            target/release/bundle/deb/*.deb
+          if-no-files-found: error

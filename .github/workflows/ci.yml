@@ -1,0 +1,25 @@
+# Tests on every push and pull request: Rust tests, the UI's WebAssembly build check and the content validator.
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: System libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libssl-dev libxdo-dev libdbus-1-dev python3-yaml
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: Content validator
+        run: python3 tools/validate.py && python3 tools/test_validate.py
+      - name: Rust tests
+        run: cargo test --workspace
+      - name: UI (wasm) check
+        run: cargo check -p ui --target wasm32-unknown-unknown
