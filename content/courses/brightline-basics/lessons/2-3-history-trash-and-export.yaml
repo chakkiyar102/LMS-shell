@@ -1,0 +1,66 @@
+id: 2-3-history-trash-and-export
+session: s2
+number: '2.3'
+title: Version history, Trash and export
+duration_min: 4
+objective: Restore an earlier version of a note, recover a deleted note, and export your notes.
+body: |
+  Mistakes happen, and sometimes you need your notes outside Brightline. This lesson covers the three safety nets.
+
+  ## Version history
+
+  Brightline keeps a version of a note each time someone stops editing it for a few seconds. Open the note's menu and choose **Version history** to see the list, newest first, with who made each change and when.
+
+  Click a version to preview it. Click **Restore this version** to bring it back. Restoring does not throw anything away: the restored text becomes a new version at the top of the list, and the versions in between stay where they were, so you can always go forward again.
+
+  ## Trash
+
+  When you delete a note, it moves to **Trash** in the sidebar. It stays there for 30 days, then it is removed for good. To get it back sooner, open Trash, select the note and click **Restore**. It returns to the notebook it was in, or to the Inbox if that notebook no longer exists.
+
+  If you share a note and then delete it, the people you shared it with lose access while it is in Trash, and get it back if you restore it.
+
+  ## Export
+
+  To take a copy out of Brightline, open the note's menu and choose **Export**. A single note exports as **Markdown** or **PDF**. To export a whole notebook, open its menu in the sidebar and choose **Export notebook**: you get a zip file with one Markdown file per note.
+
+  After the garden day, Jordan exports the Garden Day notebook as a zip to keep alongside the photos.
+key_points:
+  - Brightline keeps a version each time editing pauses. Version history lists them, newest first, with who changed what.
+  - Restoring a version adds it as a new version at the top and keeps every version in between.
+  - Deleted notes stay in Trash for 30 days, and Restore returns them to their notebook, or to the Inbox if the notebook is gone.
+  - Export a note as Markdown or PDF, or a whole notebook as a zip of Markdown files.
+quick_check:
+  - kind: single
+    prompt: You restore last Tuesday's version of a note. What happens to the versions made since Tuesday?
+    options:
+      - text: They are deleted
+        feedback: Restoring never deletes versions. They stay in the list.
+      - text: They stay in the list, and the restored text becomes a new version at the top
+        feedback: Correct. You can always go forward again to a later version.
+      - text: They move to Trash
+        feedback: Trash holds deleted notes, not versions.
+    answer: 1
+  - kind: single
+    prompt: You deleted a note 10 days ago and its notebook has since been deleted too. Where does Restore put the note?
+    options:
+      - text: In the Inbox
+        feedback: Correct. When the original notebook no longer exists, a restored note goes to the Inbox.
+      - text: Nowhere, it cannot be restored
+        feedback: The note is still within its 30 days in Trash, so it can be restored.
+      - text: In a new notebook with the old name
+        feedback: Brightline does not recreate notebooks. The note goes to the Inbox.
+    answer: 0
+  - kind: match
+    prompt: Match each export to what you get
+    left:
+      - Export a single note
+      - Export a whole notebook
+    right:
+      - A zip file with one Markdown file per note
+      - A Markdown or PDF file
+    answer: [1, 0]
+    feedback:
+      - A single note exports as Markdown or PDF.
+      - Export notebook gives a zip of Markdown files, one per note.
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

@@ -1,0 +1,114 @@
+id: s1-check
+session: s1
+title: Session 1 check
+pass_mark: 0.75
+questions:
+  - kind: single
+    prompt: Which pane shows the notes in the place you picked in the sidebar?
+    options:
+      - text: The note list
+        feedback: Correct. The middle pane lists the notes in the place you picked, newest first.
+      - text: The editor
+        feedback: The editor shows one note, the one you picked in the list.
+      - text: The sidebar
+        feedback: The sidebar lists places, such as Inbox and Notebooks, not the notes in them.
+    answer: 0
+  - kind: single
+    prompt: You are typing in the editor and press N. What happens?
+    options:
+      - text: A new note opens
+        feedback: N creates a new note only when the cursor is outside the editor.
+      - text: The letter n is typed into your note
+        feedback: Correct. Inside the editor, N is just a letter. Press it outside the editor, or click New note.
+      - text: The note is saved
+        feedback: Brightline saves as you type. No key is needed to save.
+    answer: 1
+  - kind: single
+    prompt: The label under a note's title reads Offline, saving later. What does it mean?
+    options:
+      - text: Your latest changes are lost
+        feedback: They are kept and will be sent when you are back online.
+      - text: The note has become read-only
+        feedback: You can keep editing while offline.
+      - text: Your changes will be saved when your connection returns
+        feedback: Correct. Brightline holds the changes and sends them once you are online again.
+    answer: 2
+  - kind: single
+    prompt: You open the Garden Day notebook and click New note. Where does the note go?
+    options:
+      - text: Into the Garden Day notebook
+        feedback: Correct. A note created while a notebook is open goes into that notebook.
+      - text: Into the Inbox
+        feedback: Only notes created from the Inbox start there.
+      - text: Into Shared with me
+        feedback: Shared with me holds notes others have shared with you.
+    answer: 0
+  - kind: single
+    prompt: Which typing shortcut, followed by a space, starts a numbered list?
+    options:
+      - text: '1.'
+        feedback: Correct. A number and a full stop followed by a space start a numbered list.
+      - text: '-'
+        feedback: A dash starts a bulleted list.
+      - text: '##'
+        feedback: Two hashes start a smaller heading.
+      - text: '[]'
+        feedback: Square brackets start a checklist item.
+    answer: 0
+  - kind: multi
+    prompt: Which of these can you insert from the slash menu? Select all that apply.
+    options:
+      - text: A divider
+        feedback: Correct. The slash menu includes a divider.
+      - text: A table
+        feedback: Correct. The slash menu includes a table.
+      - text: A checklist
+        feedback: Correct. The slash menu includes a checklist.
+      - text: A new notebook
+        feedback: Notebooks are created from the + next to Notebooks in the sidebar, not inside a note.
+    answer: [0, 1, 2]
+  - kind: single
+    prompt: A note has five checklist items and you have ticked three. What does the note list show for it?
+    options:
+      - text: Nothing different
+        feedback: Notes with checklist items show a progress count in the list.
+      - text: A progress count, 3 of 5
+        feedback: Correct. The count shows how many items are ticked out of the total.
+      - text: Only the two items still open
+        feedback: The note list shows note titles and a count, not individual items.
+    answer: 1
+  - kind: single
+    prompt: You want a Garden Day folder that sits inside a Community notebook. What happens?
+    options:
+      - text: Brightline nests it one level deep
+        feedback: Notebooks cannot be nested at all.
+      - text: You cannot nest notebooks, so use a Garden Day notebook or a tag instead
+        feedback: Correct. Keep notebooks broad and use tags for anything that cuts across them.
+      - text: The notes are copied into both notebooks
+        feedback: A note lives in exactly one notebook.
+    answer: 1
+  - kind: multi
+    prompt: Which of these add a tag to a note? Select all that apply.
+    options:
+      - text: Clicking Add tag under the note title
+        feedback: Correct. Add tag sits under the title.
+      - text: Typing a hash and a word in the body, such as budget after the hash
+        feedback: Correct. A hash followed by a word in the body adds that tag.
+      - text: Dragging the note onto a notebook
+        feedback: Dragging a note onto a notebook moves it. It does not add a tag.
+    answer: [0, 1]
+  - kind: match
+    prompt: Match each task to where you do it
+    left:
+      - Create a notebook
+      - Move a note to another notebook
+      - See every note with a tag
+    right:
+      - The + next to Notebooks in the sidebar
+      - The tag's name under Tags in the sidebar
+      - Move to in the note's menu, or drag it in the note list
+    answer: [0, 2, 1]
+    feedback:
+      - New notebooks are created with the + next to Notebooks.
+      - Use Move to in the note's menu, or drag the note onto a notebook.
+      - Clicking a tag under Tags lists every note that has it.

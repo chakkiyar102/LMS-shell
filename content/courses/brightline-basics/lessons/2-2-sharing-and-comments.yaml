@@ -1,0 +1,68 @@
+id: 2-2-sharing-and-comments
+session: s2
+number: '2.2'
+title: Sharing and comments
+duration_min: 4
+objective: Share a note with the right level of access and use comments and mentions to work with others.
+body: |
+  Notes are often more useful when other people can see them. Brightline lets you share a single note, either with named people or with anyone who has a link.
+
+  ## Invite people
+
+  Open the note and click **Share** in the top right. Type an email address, pick an access level, and click **Invite**. There are three levels.
+
+  - **Viewer** can read the note.
+  - **Commenter** can read the note and add comments.
+  - **Editor** can read, comment and change the note, and invite others at the same level or lower.
+
+  Only the note's owner can delete it or change who owns it. People you invite find the note under **Shared with me** in their sidebar.
+
+  ## Share a link
+
+  At the bottom of the Share panel, **Link sharing** is off by default. Turn it on and anyone with the link can view the note, without signing in. A link never gives comment or edit access. Turn link sharing off again and the old link stops working straight away.
+
+  ## Comments and mentions
+
+  Select some text in a note and click **Comment** to start a thread on that text. Type `@` followed by a name to mention someone who already has access, and they get a notification. When the discussion is done, click **Resolve** to hide the thread. Resolved threads can be reopened from the comments panel.
+
+  Jordan invites Sam Ortiz as an Editor to help plan, and Casey Morgan as a Commenter to review the budget. A view-only link goes in the neighborhood newsletter.
+key_points:
+  - Share a note from Share in the top right, as Viewer, Commenter or Editor.
+  - Editors can change the note and invite others at their level or lower. Only the owner can delete the note.
+  - Link sharing is off by default, gives view-only access, and turning it off disables the old link at once.
+  - Comments attach to selected text. A mention with @ notifies someone who already has access, and Resolve hides a finished thread.
+quick_check:
+  - kind: single
+    prompt: A neighbor should be able to suggest changes to the budget but not change the note. Which access level fits?
+    options:
+      - text: Viewer
+        feedback: A Viewer can only read the note and cannot leave suggestions.
+      - text: Commenter
+        feedback: Correct. A Commenter can read and add comments, but cannot change the note.
+      - text: Editor
+        feedback: An Editor can change the note, which is more than this person needs.
+    answer: 1
+  - kind: single
+    prompt: You posted a note's share link in a newsletter. What can people who open the link do?
+    options:
+      - text: View the note
+        feedback: Correct. A link always gives view-only access.
+      - text: View and comment
+        feedback: A link never gives comment access. Invite people by email for that.
+      - text: Edit the note once they sign in
+        feedback: A link never gives edit access, signed in or not.
+    answer: 0
+  - kind: multi
+    prompt: Sam is an Editor on your note. What can Sam do? Select all that apply.
+    options:
+      - text: Change the note's text
+        feedback: Correct. Editors can change the note.
+      - text: Invite someone as a Commenter
+        feedback: Correct. Editors can invite others at their own level or lower.
+      - text: Delete the note
+        feedback: Only the owner can delete a note.
+      - text: Transfer ownership to themselves
+        feedback: Only the owner can change who owns the note.
+    answer: [0, 1]
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

@@ -1,0 +1,72 @@
+id: 1-2-writing-and-formatting
+session: s1
+number: '1.2'
+title: Writing and formatting notes
+duration_min: 4
+objective: Format a note with headings, lists and checklists, using shortcuts or the slash menu.
+body: |
+  A note is easier to scan when it has structure. Brightline gives you two ways to add it: typing shortcuts, and the slash menu.
+
+  ## Typing shortcuts
+
+  Type these at the start of a new line and Brightline turns them into formatting as soon as you press the space bar.
+
+  | Type | You get |
+  |---|---|
+  | `#` then a space | A large heading |
+  | `##` then a space | A smaller heading |
+  | `-` then a space | A bulleted list |
+  | `1.` then a space | A numbered list |
+  | `[]` then a space | A checklist item |
+
+  For text inside a line, wrap words in `**double asterisks**` for bold, or select the words and press **Ctrl+B** (**Cmd+B** on a Mac).
+
+  ## The slash menu
+
+  If you do not remember a shortcut, type `/` at the start of an empty line. A menu opens with every block you can add, including headings, lists, checklists, a divider, a table and a code block. Keep typing to filter it, for example `/check`, then press **Enter** to insert the block.
+
+  ## Checklists
+
+  Checklist items have a box you can tick. Ticked items stay in place but are struck through, so you can still see what was done. A note that contains at least one checklist item shows a small progress count, such as **3 of 5**, in the note list.
+
+  Jordan turns the garden day ideas into a checklist: book the shared tools, order soil, and email the volunteers. Ticking each one off as it happens keeps the whole group up to date at a glance.
+key_points:
+  - Shortcuts at the start of a line become formatting when you press space, for example `#` for a heading and `[]` for a checklist item.
+  - Type `/` on an empty line to open the slash menu and insert any block, then filter by typing.
+  - Bold text with double asterisks or with Ctrl+B (Cmd+B on a Mac).
+  - Ticked checklist items stay in place, struck through, and the note list shows a progress count such as 3 of 5.
+quick_check:
+  - kind: single
+    prompt: You want a checklist item at the start of a new line. What do you type before the space?
+    options:
+      - text: '[]'
+        feedback: Correct. Square brackets followed by a space create a checklist item.
+      - text: '-'
+        feedback: A dash followed by a space creates a bulleted list, without boxes to tick.
+      - text: '#'
+        feedback: A hash followed by a space creates a heading.
+    answer: 0
+  - kind: single
+    prompt: You cannot remember the shortcut for a table. What is the quickest way to add one?
+    options:
+      - text: Copy a table from another note
+        feedback: That works only if you already have one. The slash menu lists every block.
+      - text: Type / on an empty line, filter for table and press Enter
+        feedback: Correct. The slash menu lists every block you can add, and typing filters it.
+      - text: Press Ctrl+B twice
+        feedback: Ctrl+B makes the selected text bold. It does not insert blocks.
+    answer: 1
+  - kind: multi
+    prompt: What happens when you tick a checklist item? Select all that apply.
+    options:
+      - text: The item is struck through
+        feedback: Correct. Ticked items are struck through so you can see what is done.
+      - text: The item stays where it is
+        feedback: Correct. Ticked items stay in place rather than moving to the bottom.
+      - text: The item is deleted after a day
+        feedback: Ticked items are never removed for you. You decide when to delete them.
+      - text: The note list shows a progress count for the note
+        feedback: Correct. A note with checklist items shows a count such as 3 of 5 in the note list.
+    answer: [0, 1, 3]
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

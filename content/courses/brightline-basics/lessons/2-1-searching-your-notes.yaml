@@ -1,0 +1,72 @@
+id: 2-1-searching-your-notes
+session: s2
+number: '2.1'
+title: Finding anything with search
+duration_min: 4
+objective: Open search and narrow results with filters, quotes and exclusions.
+body: |
+  Filing notes well helps, but most of the time the fastest way back to a note is search.
+
+  ## Open search
+
+  Press **Ctrl+K** (**Cmd+K** on a Mac) from anywhere in the workspace, or click the magnifying glass at the top of the sidebar. Start typing and results appear as you type. Brightline searches note titles, note bodies and tags, and shows titles first.
+
+  ## Narrow it down
+
+  A plain word finds every note that contains it. Add these to be more precise. You can combine as many as you need.
+
+  | Type | Finds |
+  |---|---|
+  | `"soil delivery"` | Notes with that exact phrase |
+  | `tag:budget` | Notes with the tag budget |
+  | `in:"Garden Day"` | Notes in the Garden Day notebook |
+  | `-draft` | Leaves out notes that contain draft |
+  | `is:checklist` | Notes with at least one checklist item |
+
+  For example, `in:"Garden Day" tag:todo -done` finds notes in the Garden Day notebook, tagged todo, that do not mention done. Quotes are needed around a notebook name only when it has a space in it.
+
+  ## What search does not cover
+
+  Notes in **Trash** are left out of results. Open Trash in the sidebar to look there. Text inside attached files, such as a PDF, is not searched either, so give attachments a clear name or a line of description in the note.
+
+  Jordan searches `tag:todo in:"Garden Day"` each morning to see what is still open for the event.
+key_points:
+  - Open search with Ctrl+K (Cmd+K on a Mac) or the magnifying glass. It covers titles, bodies and tags.
+  - Quotes find an exact phrase, tag and in filters narrow by tag and notebook, and a leading minus leaves a word out.
+  - Filters combine, so one search can narrow by notebook, tag and words at once.
+  - Notes in Trash and text inside attached files are not searched.
+quick_check:
+  - kind: single
+    prompt: You want notes in the Garden Day notebook that are tagged todo. Which search does that?
+    options:
+      - text: in:"Garden Day" tag:todo
+        feedback: Correct. The in filter picks the notebook and the tag filter picks the tag. Quotes are needed because the name has a space.
+      - text: Garden Day todo
+        feedback: This finds notes that contain those words anywhere, not notes in that notebook with that tag.
+      - text: tag:"Garden Day" in:todo
+        feedback: This has the filters the wrong way round. in is for notebooks and tag is for tags.
+    answer: 0
+  - kind: single
+    prompt: You deleted a note yesterday and search cannot find it. Why?
+    options:
+      - text: Search only covers notes from the last day
+        feedback: Search covers all your notes, whatever their age.
+      - text: Notes in Trash are left out of search results
+        feedback: Correct. Open Trash in the sidebar to look for deleted notes.
+      - text: You need to add a minus before the title
+        feedback: A leading minus leaves words out of results. It does not include deleted notes.
+    answer: 1
+  - kind: multi
+    prompt: What does search look through? Select all that apply.
+    options:
+      - text: Note titles
+        feedback: Correct. Titles are searched and shown first.
+      - text: Note bodies
+        feedback: Correct. The full text of each note is searched.
+      - text: Tags
+        feedback: Correct. Tags are searched too.
+      - text: Text inside attached PDF files
+        feedback: Attached files are not searched. Name them clearly or describe them in the note.
+    answer: [0, 1, 2]
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

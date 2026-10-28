@@ -1,0 +1,110 @@
+id: s2-check
+session: s2
+title: Session 2 check
+pass_mark: 0.75
+questions:
+  - kind: single
+    prompt: Which keys open search on a Windows computer?
+    options:
+      - text: Ctrl+K
+        feedback: Correct. On a Mac it is Cmd+K.
+      - text: Ctrl+B
+        feedback: Ctrl+B makes selected text bold.
+      - text: Ctrl+S
+        feedback: Brightline saves as you type, and search has its own shortcut.
+    answer: 0
+  - kind: single
+    prompt: You want notes that contain the exact phrase soil delivery. What do you type?
+    options:
+      - text: soil delivery
+        feedback: Without quotes, this finds notes with both words anywhere, not the exact phrase.
+      - text: '"soil delivery"'
+        feedback: Correct. Quotes find the exact phrase.
+      - text: tag:soil delivery
+        feedback: This looks for a tag named soil plus the word delivery.
+    answer: 1
+  - kind: single
+    prompt: What does adding -draft to a search do?
+    options:
+      - text: Finds only notes that contain draft
+        feedback: That is what draft alone does. The minus does the opposite.
+      - text: Leaves out notes that contain draft
+        feedback: Correct. A leading minus excludes a word.
+      - text: Finds notes in a notebook named draft
+        feedback: Use in followed by a colon for a notebook.
+    answer: 1
+  - kind: multi
+    prompt: Which notes will search not find? Select all that apply.
+    options:
+      - text: A note in Trash
+        feedback: Correct. Notes in Trash are left out of search results.
+      - text: A note whose only mention of the word is inside an attached PDF
+        feedback: Correct. Text inside attached files is not searched.
+      - text: A note where the word appears only in a tag
+        feedback: Tags are searched, so this note will be found.
+    answer: [0, 1]
+  - kind: single
+    prompt: You want a teammate to fix typos in your note and invite one more reviewer. Which access level do you give?
+    options:
+      - text: Viewer
+        feedback: A Viewer can only read.
+      - text: Commenter
+        feedback: A Commenter can read and comment but cannot change the note.
+      - text: Editor
+        feedback: Correct. An Editor can change the note and invite others at their level or lower.
+    answer: 2
+  - kind: single
+    prompt: You turn link sharing off on a note. What happens to the link you posted last week?
+    options:
+      - text: It keeps working for 30 days
+        feedback: The link stops working straight away.
+      - text: It stops working straight away
+        feedback: Correct. Turning link sharing off disables the old link at once.
+      - text: It keeps working for people who already opened it
+        feedback: The link stops working for everyone.
+    answer: 1
+  - kind: single
+    prompt: You mention someone with @ in a comment, but they have no access to the note. What should you do first?
+    options:
+      - text: Share the note with them
+        feedback: Correct. Mentions work for people who already have access, so share the note first.
+      - text: Mention them again
+        feedback: A mention only notifies people who already have access to the note.
+      - text: Resolve the thread
+        feedback: Resolving hides the thread and does not give anyone access.
+    answer: 0
+  - kind: single
+    prompt: Who can delete a shared note?
+    options:
+      - text: Any Editor
+        feedback: Editors can change the note but not delete it.
+      - text: Only the owner
+        feedback: Correct. Only the owner can delete a note or change who owns it.
+      - text: Anyone with the link
+        feedback: A link gives view-only access.
+    answer: 1
+  - kind: single
+    prompt: You deleted a shared note by mistake and restored it from Trash an hour later. What about the people you shared it with?
+    options:
+      - text: They have to be invited again
+        feedback: Restoring the note gives their access back.
+      - text: They get their access back
+        feedback: Correct. People lose access while the note is in Trash and get it back when you restore it.
+      - text: They kept access the whole time
+        feedback: They lose access while the note is in Trash.
+    answer: 1
+  - kind: match
+    prompt: Match each situation to the safety net that fits it
+    left:
+      - You pasted over a paragraph by mistake this morning
+      - You deleted a note last week
+      - You want a copy of a notebook outside Brightline
+    right:
+      - Export notebook
+      - Version history
+      - Trash
+    answer: [1, 2, 0]
+    feedback:
+      - Version history lets you restore the note as it was before the paste.
+      - Deleted notes stay in Trash for 30 days.
+      - Export notebook gives a zip with one Markdown file per note.

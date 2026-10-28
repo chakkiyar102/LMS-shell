@@ -1,0 +1,130 @@
+id: final
+title: Final assessment
+minutes: 20
+blurb: Help a small team get its notes in order, from filing and formatting to sharing and recovery.
+pass_mark: 0.75
+fixture: |
+  # The book club notes
+
+  Riley Brooks runs a neighborhood book club with five members and has just moved its notes into Brightline Notes. Right now everything sits in Riley's Inbox: meeting notes, a reading list, a budget for snacks and room hire, and a few half-written ideas.
+
+  Riley wants to:
+
+  - keep each kind of note easy to find,
+  - share the reading list with members so they can suggest books, without letting them change it,
+  - let the co-organizer, Taylor Reed, edit the meeting notes,
+  - and never lose a note by accident.
+
+  Answer the questions in the three tasks below using what you learned in this course. All names here are fictional.
+tasks:
+  - id: organise
+    minutes: 7
+    questions:
+      - kind: match
+        prompt: Match each need in the book club to the tool that fits it
+        left:
+          - All the book club's notes in one place
+          - Notes that still need action, across every project Riley runs
+          - A list of books with a box to tick once the club has read each one
+        right:
+          - A tag
+          - A notebook
+          - A checklist
+        answer: [1, 0, 2]
+        feedback:
+          - The club is one project, so its notes share one notebook.
+          - Something that cuts across projects is a tag, such as todo.
+          - Checklist items have a box to tick and stay in place, struck through.
+      - kind: single
+        prompt: Riley wants the snack budget to show up both with the book club notes and with every other budget note. What is the best set-up?
+        options:
+          - text: Keep it in the Book Club notebook and tag it budget
+            feedback: Correct. The notebook is its home, and the tag gathers it with every budget note.
+          - text: Duplicate the note into a Budget notebook
+            feedback: Two copies drift apart. A tag finds it from the other angle without a copy.
+          - text: Create a Budget notebook inside Book Club
+            feedback: Notebooks cannot be nested.
+        answer: 0
+      - kind: single
+        prompt: Riley types a dash and a space for each book, then wonders why there are no boxes to tick. What should Riley type instead?
+        options:
+          - text: A hash and a space
+            feedback: That makes a heading.
+          - text: Square brackets and a space
+            feedback: Correct. Square brackets followed by a space start a checklist item.
+          - text: A number, a full stop and a space
+            feedback: That makes a numbered list, still without boxes.
+        answer: 1
+  - id: share
+    minutes: 7
+    questions:
+      - kind: single
+        prompt: Members should suggest books on the reading list but not change it. Which access level does Riley give them?
+        options:
+          - text: Viewer
+            feedback: Viewers cannot leave comments, so they cannot suggest anything.
+          - text: Commenter
+            feedback: Correct. Commenters can read and comment, but cannot change the note.
+          - text: Editor
+            feedback: Editors can change the list, which Riley wants to avoid.
+        answer: 1
+      - kind: multi
+        prompt: Taylor Reed is an Editor on the meeting notes. Which of these can Taylor do? Select all that apply.
+        options:
+          - text: Rewrite last month's notes
+            feedback: Correct. Editors can change the note.
+          - text: Invite a new member as a Viewer
+            feedback: Correct. Editors can invite others at their level or lower.
+          - text: Delete the meeting notes
+            feedback: Only the owner, Riley, can delete the note.
+          - text: Make themselves the owner
+            feedback: Only the owner can change who owns a note.
+        answer: [0, 1]
+      - kind: single
+        prompt: Riley posts a link to the reading list in the library's newsletter. A reader asks how to leave a comment through it. What is the answer?
+        options:
+          - text: Sign in first, then the link allows comments
+            feedback: A link gives view-only access, signed in or not.
+          - text: Links are view-only, so Riley has to invite them by email as a Commenter
+            feedback: Correct. Comment access only comes from an invitation.
+          - text: Use the @ mention in the newsletter
+            feedback: Mentions notify people who already have access to the note.
+        answer: 1
+  - id: recover
+    minutes: 6
+    questions:
+      - kind: single
+        prompt: Taylor overwrote the agenda in the meeting notes this morning. What is the quickest fix?
+        options:
+          - text: Open Version history and restore the version from before the change
+            feedback: Correct. Restoring brings back the earlier text as a new version and keeps Taylor's change in the list.
+          - text: Look in Trash
+            feedback: Trash holds deleted notes. An overwritten paragraph is in Version history.
+          - text: Search for the old agenda
+            feedback: Search finds the current text of notes, not earlier versions.
+        answer: 0
+      - kind: single
+        prompt: Riley deleted an ideas note 45 days ago and now wants it back. What happens?
+        options:
+          - text: Restore it from Trash
+            feedback: Notes stay in Trash for 30 days. After 45 days it has been removed for good.
+          - text: It cannot be recovered, because Trash keeps notes for 30 days
+            feedback: Correct. A regular export is the way to keep a copy beyond that.
+          - text: Restore it from Version history
+            feedback: Version history belongs to a note that still exists.
+        answer: 1
+      - kind: match
+        prompt: Match each request to what Riley should do
+        left:
+          - Keep a copy of every book club note outside Brightline
+          - Send one member a printable copy of the reading list
+          - Find meeting notes that mention the venue but are not drafts
+        right:
+          - Export the note as PDF
+          - Search for venue -draft
+          - Export notebook, which gives a zip of Markdown files
+        answer: [2, 0, 1]
+        feedback:
+          - Export notebook gives one Markdown file per note in a zip.
+          - A single note exports as Markdown or PDF, and PDF prints well.
+          - A leading minus leaves out notes that contain draft.

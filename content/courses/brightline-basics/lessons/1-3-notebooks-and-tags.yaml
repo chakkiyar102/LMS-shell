@@ -1,0 +1,66 @@
+id: 1-3-notebooks-and-tags
+session: s1
+number: '1.3'
+title: Organising with notebooks and tags
+duration_min: 4
+objective: Choose between a notebook and a tag, and file a note with both.
+body: |
+  Once you have more than a handful of notes, you need a way to group them. Brightline has two tools for this, and they work differently.
+
+  ## Notebooks: one home per note
+
+  A **notebook** is a folder for notes. Every note lives in exactly one place: the Inbox or a single notebook. To create a notebook, click **+** next to **Notebooks** in the sidebar and give it a name. To move a note, drag it from the note list onto a notebook, or open the note and use **Move to** in its menu.
+
+  Notebooks cannot sit inside other notebooks. Keep the list short and broad, such as one notebook per project or area of your life.
+
+  ## Tags: as many as you like
+
+  A **tag** is a label. A note can have no tags or many. Add one by clicking **Add tag** under the note title, or by typing `#` followed by a word in the body, such as `#budget`. Every tag appears under **Tags** in the sidebar, and clicking one lists every note with that tag, whatever notebook it is in.
+
+  ## Which one to use
+
+  Use a notebook for the one place a note belongs. Use tags for anything that cuts across notebooks, such as a status (`#todo`), a person, or a topic that turns up in several projects.
+
+  Jordan creates a **Garden Day** notebook and moves the ideas note into it. The budget notes get a `#budget` tag, so Jordan can later see every budget note across all projects with one click.
+key_points:
+  - Every note lives in exactly one place, the Inbox or a single notebook.
+  - Notebooks cannot be nested. Keep them broad, such as one per project.
+  - A note can have any number of tags. Add them with Add tag or by typing a hash and a word in the body.
+  - Use a notebook for where a note belongs and tags for anything that cuts across notebooks.
+quick_check:
+  - kind: single
+    prompt: A note about the garden budget also matters to your household budget. How do you make it easy to find from both angles?
+    options:
+      - text: Put it in two notebooks
+        feedback: A note lives in exactly one notebook, so this is not possible.
+      - text: Keep it in the Garden Day notebook and add a budget tag
+        feedback: Correct. The notebook is its home, and the tag lets you find it alongside every other budget note.
+      - text: Create a Budget notebook inside the Garden Day notebook
+        feedback: Notebooks cannot sit inside other notebooks.
+    answer: 1
+  - kind: single
+    prompt: How many notebooks can one note be in at the same time?
+    options:
+      - text: One, or none if it is still in the Inbox
+        feedback: Correct. A note lives in the Inbox or in a single notebook.
+      - text: As many as you like
+        feedback: That is true of tags, not notebooks.
+      - text: Up to three
+        feedback: There is no such limit. A note has one home, and tags cover everything else.
+    answer: 0
+  - kind: match
+    prompt: Match each need to the tool that fits it
+    left:
+      - Group every note for the garden day project
+      - Mark notes from several projects that still need action
+      - Find every note that mentions the budget, across projects
+    right:
+      - A notebook
+      - A tag
+    answer: [0, 1, 1]
+    feedback:
+      - A project is one home for its notes, so a notebook fits.
+      - A status cuts across projects, so a tag such as todo fits.
+      - A topic that turns up in several projects is a tag.
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

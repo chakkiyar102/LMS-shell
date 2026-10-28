@@ -1,0 +1,54 @@
+# the companion's nudges: authored copy, chosen by rules (shared::pick_nudge), never written by an LLM.
+# One entry per trigger. text: 1-140 chars, plain and warm, no guilt, no "!!".
+# Placeholders: {lesson} (number and title), {session} (session title), {check} ("the session N check",
+# or "the final assessment" when only the final is left).
+# action: one of next_lesson, next_check, session_check, session, final, certificate, settings.
+# label: the action button's text. help: optional {title, url}, an https link under brand::HELP_URL_PREFIX
+# pose: a file name in ui/assets/mascot/ (new poses fall back to the
+# existing eight until their art ships).
+- id: hello
+  trigger: first_launch
+  text: "Hi, I'm {companion}. I'll keep you company on this course. Start with {lesson} whenever you're ready."
+  action: next_lesson
+  label: Start here
+  pose: wave
+- id: next-lesson
+  trigger: lesson_done_next
+  text: "That's one more done. {lesson} is next."
+  action: next_lesson
+  label: Open it
+  pose: thumbsup
+- id: session-lessons-done
+  trigger: session_lessons_done
+  text: "That's every lesson in {session}. Try {check} to see what stuck. You get feedback on every answer."
+  action: session_check
+  label: Take the check
+  pose: flag
+- id: check-retry
+  trigger: check_failed
+  text: "Not this time, and that's fine. Look back over the lessons in {session}, then try again. Retries are unlimited."
+  action: session
+  label: Revisit the session
+  pose: encourage
+- id: certificate-todo
+  trigger: all_lessons_done_todo
+  text: "Every lesson is done. The certificate needs each session check and the final. Next step: {check}."
+  action: next_check
+  label: Take me there
+  pose: point-right
+- id: final-passed
+  trigger: final_passed
+  text: "You passed the final assessment. Your certificate is ready."
+  action: certificate
+  label: See my certificate
+  pose: trophy
+- id: welcome-back
+  trigger: back_after_break
+  text: "Welcome back. You left off at {lesson}."
+  action: next_lesson
+  label: Pick up here
+  pose: wave
+- id: studied-today
+  trigger: studied_today
+  text: "Good work today. Short, regular sessions are how it sticks."
+  pose: thumbsup

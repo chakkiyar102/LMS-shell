@@ -1,0 +1,71 @@
+id: 1-1-welcome-to-brightline
+session: s1
+number: '1.1'
+title: Welcome to Brightline Notes
+duration_min: 3
+objective: Name the parts of the Brightline Notes workspace and create your first note.
+body: |
+  Brightline Notes is a web app for writing things down and finding them again. You open it in your browser, sign in, and land in your **workspace**. Everything in this course happens there.
+
+  ## The three panes
+
+  The workspace has three panes, from left to right.
+
+  - **The sidebar** lists the places your notes live: **Inbox**, **Notebooks**, **Tags**, **Shared with me** and **Trash**.
+  - **The note list** shows the notes in whatever you picked in the sidebar, newest first.
+  - **The editor** shows the note you picked in the list. This is where you read and write.
+
+  ## Your first note
+
+  Click **New note** at the top of the note list, or press **N** anywhere outside the editor. A blank note opens in the editor with the cursor in the title. Type a title, press **Enter**, and start writing the body.
+
+  There is no Save button. Brightline saves as you type, and the word **Saved** appears under the title a moment after you stop. If you lose your connection, the label changes to **Offline, saving later**, and your changes are sent when you are back online.
+
+  ## Where new notes go
+
+  A note you create from the Inbox stays in the **Inbox** until you move it. Think of the Inbox as a tray for quick notes you will sort later. A note you create while a notebook is open goes straight into that notebook.
+
+  In this course you will follow Jordan Hale, who is planning a community garden day with a few neighbors. Jordan's first note is a simple list of ideas, written straight into the Inbox.
+key_points:
+  - The workspace has three panes, left to right, the sidebar, the note list and the editor.
+  - Create a note with **New note** or by pressing **N** outside the editor.
+  - Brightline saves as you type. **Saved** confirms it, and **Offline, saving later** means changes will sync when you reconnect.
+  - A note created from the Inbox stays there until you move it. A note created inside an open notebook goes into that notebook.
+quick_check:
+  - kind: single
+    prompt: You just typed a paragraph into a note. What do you need to do to keep it?
+    options:
+      - text: Nothing, Brightline saves as you type
+        feedback: Correct. The note saves automatically, and **Saved** appears under the title shortly after you stop typing.
+      - text: Click Save at the top of the editor
+        feedback: There is no Save button. Brightline saves as you type.
+      - text: Press N to store the note
+        feedback: Pressing N outside the editor creates a new note. It does not save the current one.
+    answer: 0
+  - kind: single
+    prompt: You create a note while the Inbox is selected in the sidebar. Where does the note live?
+    options:
+      - text: In the first notebook in the sidebar
+        feedback: Brightline does not pick a notebook for you. The note stays where you created it.
+      - text: In the Inbox, until you move it
+        feedback: Correct. Notes created from the Inbox stay there until you file them.
+      - text: In Shared with me
+        feedback: Shared with me holds notes other people share with you, not notes you create.
+    answer: 1
+  - kind: match
+    prompt: Match each pane to what it shows
+    left:
+      - The sidebar
+      - The note list
+      - The editor
+    right:
+      - The note you picked, ready to read and edit
+      - Places your notes live, such as Inbox and Trash
+      - The notes in the place you picked, newest first
+    answer: [1, 2, 0]
+    feedback:
+      - The sidebar is the leftmost pane and lists the places your notes live.
+      - The note list sits in the middle and shows the notes in the place you picked.
+      - The editor is on the right and shows the note you picked in the list.
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

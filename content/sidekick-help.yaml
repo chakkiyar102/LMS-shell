@@ -1,0 +1,289 @@
+# the companion's hover help: what every meaningful control does, keyed by the data-help="..." attribute in the UI.
+# label: the tooltip (short, under 40 chars). tip: true shows it as a tooltip after ~500 ms of hover or on
+# keyboard focus (icon-only and terse controls). text: what the companion says when the mouse rests on the control
+# for 5 s (once per control per device), plus any caveat worth knowing. Under 260 chars, no em-dashes.
+# The key's prefix is its area for the companion's familiarity model: top, nav, course, lesson, quiz, text, side ->
+# course; settings -> settings; coach -> coach pane; pane, rail -> practice pane and session.
+
+# ---- top bar ----
+- key: top.home
+  label: Course home
+  tip: true
+  text: "Takes you to this course's home page: your next lesson, your progress and every session."
+- key: top.course-tab
+  label: Switch course
+  tip: true
+  text: "Each tab is one course. Switching keeps your place in both, so you can hop back any time."
+- key: top.locked
+  label: Needs an access code
+  tip: true
+  text: "This course is locked. It opens with the username and access code you were given (Settings, Access), whatever your role."
+- key: top.streak
+  label: Your study streak
+  tip: true
+  text: "Days in a row with some study. One lesson a day keeps the flame lit. Miss a day and it starts again from one."
+- key: top.update
+  label: App updates
+  text: "Shows whether this app is up to date. Click it to check again, download an update, or restart into a new version. Your progress stays put."
+- key: top.tour
+  label: Course tour
+  tip: true
+  text: "Plays a short video of where everything is in the app. Handy if you've forgotten where something lives."
+- key: top.theme
+  label: Light or dark theme
+  tip: true
+  text: "Flips between light and dark. Settings, Appearance also has Match system, which follows your computer."
+- key: top.settings
+  label: Settings
+  tip: true
+  text: "Your profile, access code, theme, {companion}'s mode, the AI provider and your practice app all live here."
+
+# ---- breadcrumbs and text size ----
+- key: nav.back
+  label: Back
+  tip: true
+  text: "Goes back to the page you were on before, within this course."
+- key: text.bigger
+  label: Larger text
+  tip: true
+  text: "Makes all the text bigger. The setting is remembered on this computer."
+- key: text.smaller
+  label: Smaller text
+  tip: true
+  text: "Makes all the text smaller. The setting is remembered on this computer."
+
+# ---- the companion's side pane (outside a coaching session) ----
+- key: side.tab
+  label: Open {companion}
+  tip: true
+  text: "Opens my pane. Ask me anything about the course, or switch to Coach and I'll walk you through a lesson one stage at a time."
+- key: side.sidekick
+  label: {companion}
+  tip: true
+  text: "That's me. Click me and I'll do a trick. When I fly off to show you something, I come back here."
+- key: side.collapse
+  label: Tuck {companion} away
+  tip: true
+  text: "Folds my pane back into the slim tab on the edge. Your conversation stays where it is."
+- key: side.where
+  label: Where to?
+  tip: true
+  text: "Shortcuts to your next lesson, next check, the final or your certificate. With an AI provider set up, you can also type where you want to go."
+
+# ---- course home ----
+- key: course.continue
+  label: Next lesson
+  text: "Always opens the next lesson you haven't finished, so you never have to hunt for your place."
+- key: course.progress
+  label: Your progress
+  text: "How much of the course is done, your streak and the session checks you've passed. The squares are your study days, darker means more."
+- key: course.session
+  label: Open this session
+  text: "A session groups a few lessons, an exercise and a session check. The bar shows how many of its lessons you've finished."
+- key: course.final
+  label: Final assessment
+  text: "The last test for the certificate. Take it once you've passed every session check. You can retry it."
+- key: course.certificate
+  label: Your certificate
+  text: "Issued once every session check and the final are passed. Until then it lists exactly what's left."
+
+# ---- lesson ----
+- key: lesson.rail
+  label: Lessons in this session
+  text: "Every lesson in this session. A tick means done. Click one to jump straight to it."
+- key: lesson.video
+  label: Lesson video
+  text: "The lesson's video. It remembers where you stopped, and watching to the end marks the lesson complete."
+- key: lesson.chapters
+  label: Video chapters
+  text: "Each chapter jumps the video to that moment and starts playing, so you can rewatch just the part you need."
+- key: lesson.quick-check
+  label: Quick check
+  text: "A few questions to lock the lesson in. They don't count toward your certificate, and you can resubmit as often as you like."
+- key: lesson.complete
+  label: Mark lesson complete
+  text: "Saves this lesson as done, moves your progress on, and lets me point you to what's next. You can still come back to it."
+- key: lesson.ask
+  label: Ask {companion} about this lesson
+  text: "Opens my pane in Ask mode, focused on this lesson. I answer from the lesson and say when a question goes beyond it."
+- key: lesson.practice
+  label: Start a coaching session
+  text: "Opens your practice app beside the lesson, with me in a column on the right to coach you stage by stage. Set your practice app in Settings first."
+- key: lesson.help
+  label: Read more links
+  text: "Further reading for this lesson. The links open in your browser."
+- key: lesson.pager
+  label: Previous and next lesson
+  text: "Steps to the lesson before or after this one, in course order."
+- key: quiz.submit
+  label: Submit answers
+  text: "Grades your answers and shows feedback under each question. Resubmit as often as you like; on a session check, your best score counts."
+
+# ---- coaching session: the the companion column ----
+- key: coach.mode-coach
+  label: Coach mode
+  tip: true
+  text: "Coach walks you through the task in stages, with a hint ladder. I guide rather than hand you the answer."
+- key: coach.mode-ask
+  label: Ask {companion} mode
+  tip: true
+  text: "Ask {companion} gives straight answers, no hint ladder. Good when you just need a fact or a setting."
+- key: coach.stage
+  label: Jump to a stage
+  tip: true
+  text: "Each dot is a stage of this task. A tick means done. Click any one to go back or skip ahead."
+- key: coach.hint
+  label: Show a hint
+  text: "Hints come one small step at a time, so you can stop as soon as it clicks. Each one gives a little more away."
+- key: coach.next-stage
+  label: Next stage
+  text: "Moves you on to the next stage when this one's done. You can always click a stage number to go back."
+- key: coach.look
+  label: Look at my screen
+  text: "Your next message goes to my screen helper. I read your practice page and tell you where to click. I don't change anything. Needs an OpenAI API key."
+- key: coach.act
+  label: Do it for me
+  text: "Tell me what to do and I do it in your practice app while you watch. Changes like Submit ask you first, and I never delete anything. Needs an OpenAI API key."
+- key: coach.check-build
+  label: Check my build
+  text: "I look at what you built in the practice app and mark each acceptance criterion met, not met or can't tell. It's advisory and never affects your score."
+- key: coach.stop
+  label: Stop {companion}
+  text: "Stops my screen helper straight away. Anything I already did in the practice app stays done."
+- key: coach.send
+  label: Message {companion}
+  text: "Tell me what you did or where you're stuck. In Coach mode I guide you; in Ask {companion} I answer straight. Enter sends, Shift+Enter adds a line."
+
+# ---- coaching session: the practice pane's toolbar and tabs ----
+- key: pane.back
+  label: Back
+  tip: true
+  text: "Goes back a page inside your practice pane, like a browser's back button."
+- key: pane.forward
+  label: Forward
+  tip: true
+  text: "Goes forward a page inside your practice pane."
+- key: pane.reload
+  label: Reload
+  tip: true
+  text: "Reloads the practice page. Handy if it looks stuck. Anything you hadn't saved in a form is lost."
+- key: pane.home
+  label: Home
+  tip: true
+  text: "Takes the pane back to your practice account's home page."
+- key: pane.browser
+  label: Open in browser
+  tip: true
+  text: "Opens this practice page in your own browser. Use it if your company's sign-in won't work inside the app."
+- key: pane.more
+  label: More pane buttons
+  tip: true
+  text: "In a narrow practice column, Forward, Reload, Home and Open in browser wait behind this button. Click it to swap them in, and again to swap back."
+- key: pane.hide
+  label: Hide the practice app
+  tip: true
+  text: "Folds the practice column to a slim tab. It keeps its page; click the tab or Practice in the left rail to bring it back."
+- key: pane.close
+  label: Close the practice app
+  tip: true
+  text: "Closes the practice pane (Shift-Cmd-W). The session stays open; Practice in the left rail opens it again."
+- key: pane.tab
+  label: Switch practice tab
+  tip: true
+  text: "Links like Edit app open in a new tab here, like a browser. Click a tab to bring it to the front."
+- key: pane.tab-close
+  label: Close tab
+  tip: true
+  text: "Closes this practice tab. Closing the last one closes the pane."
+- key: pane.col-hide
+  label: Hide this column
+  tip: true
+  text: "Folds this column to a slim tab so the others get the room. Click the tab to open it again."
+- key: pane.col-show
+  label: Show this column
+  tip: true
+  text: "Opens this column again."
+
+# ---- coaching session: the left rail ----
+- key: rail.course
+  label: Show or hide the course
+  tip: true
+  text: "Shows or folds the lesson column. Fold it when you want more room for the practice app."
+- key: rail.practice
+  label: Show or hide practice
+  tip: true
+  text: "Shows or folds your practice app. On a phone it opens the practice app in your browser instead."
+- key: rail.sidekick
+  label: Show or hide {companion}
+  tip: true
+  text: "Shows or folds my column, where I coach you and answer questions."
+- key: rail.all
+  label: Show all three
+  tip: true
+  text: "Opens the course, the practice app and me side by side again."
+- key: rail.end
+  label: End session
+  tip: true
+  text: "Ends the coaching session and closes the practice pane. Your progress and what you built in the practice app stay."
+
+# ---- settings ----
+- key: settings.name
+  label: Full name
+  text: "Your name as it appears on your certificate. Use the name you'd want an employer to see."
+- key: settings.email
+  label: Work email
+  text: "Your work email. Temporary or disposable addresses aren't accepted. It's stored on this computer only."
+- key: settings.role
+  label: Your role
+  text: "Learner, Partner or Staff. Every role gets the open courses; a gated course needs an access code for everyone, whatever the role."
+- key: settings.save-profile
+  label: Save profile
+  text: "Saves your name, email and role. Your role doesn't lock or unlock a gated course: only the access code does."
+- key: settings.access
+  label: Access
+  text: "Enter the username and access code you were given to open gated courses on this computer."
+- key: settings.remove-code
+  label: Remove access code
+  text: "Forgets the saved access code on this computer. Gated courses lock again, whatever your role. Your progress in it is kept."
+- key: settings.theme
+  label: Theme
+  text: "Light, dark, or Match system to follow your computer's setting."
+- key: settings.tour
+  label: Course tour
+  text: "Replays the short video tour of the app. Nothing about your progress changes."
+- key: settings.sidekick-mode
+  label: {companion} companion
+  text: "On: I explain controls, nudge when you seem stuck and fly over to show you things. Quiet: I stay in my tab until you click me. Off: just the tab, for asking."
+- key: settings.provider
+  label: AI provider
+  text: "The AI behind Ask {companion}, coaching, exercise reviews and my screen helper. Lessons, checks and your certificate never need one."
+- key: settings.caps
+  label: Which provider to pick
+  text: "A table of what each provider can do. Only an OpenAI API key runs Look at my screen and Do it for me."
+- key: settings.endpoint
+  label: Address
+  text: "Where your Ollama or custom server runs. Ollama's usual address is http://127.0.0.1:11434."
+- key: settings.api-key
+  label: API key
+  text: "Your provider's API key. It's kept in your computer's keychain, never in a file, and each provider keeps its own."
+- key: settings.find-models
+  label: Find models
+  text: "Checks that the provider answers and lists the models you can use."
+- key: settings.model
+  label: Model
+  text: "Which model I use. If coaching or the screen helper fails, a newer model that supports tools usually fixes it."
+- key: settings.data-note
+  label: What gets sent
+  text: "Lesson text, your questions and, for the screen helper, your practice screen go to this provider. Pick Ollama to keep everything on your computer."
+- key: settings.practice-url
+  label: Practice app address
+  text: "The web app I open beside lessons in a coaching session. Use a training or sandbox account: exercises create real records."
+- key: settings.save
+  label: Save settings
+  text: "Saves your AI provider, model and practice account."
+- key: settings.save-test
+  label: Save and test
+  text: "Saves, then sends the model a tiny test message so you know it works before you need it."
+- key: settings.start-over
+  label: Start over on this computer
+  text: "Erases everything this app keeps about you on this computer: progress, profile, access code and keys. It can't be undone. The courses stay installed."

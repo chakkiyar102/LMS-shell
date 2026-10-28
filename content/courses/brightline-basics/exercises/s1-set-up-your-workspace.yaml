@@ -1,0 +1,43 @@
+id: s1-set-up-your-workspace
+session: s1
+title: Set up a project notebook
+minutes: 20
+brief: |
+  You are helping plan a community garden day. Set up Brightline Notes so the plan is easy to keep up to date, then write a short summary of what you did.
+
+  **Part A: the notebook (5 min).** Create a notebook named **Garden Day**.
+
+  **Part B: the plan (10 min).** In that notebook, create a note titled **Garden day plan** with:
+
+  1. A heading **Tasks**, followed by at least four checklist items, such as booking tools, ordering soil, emailing volunteers and checking the weather.
+  2. A heading **Budget**, followed by a bulleted list of at least three costs.
+  3. One word in bold that a reader should not miss.
+
+  Tick one checklist item. Add the tags **todo** and **budget** to the note.
+
+  **Part C: the write-up (5 min).** In a few sentences, say which shortcuts or menu you used for each part, what the note list now shows for this note, and why you used a notebook for the project but tags for todo and budget.
+
+  If you do not have a Brightline Notes account, write the same plan in any editor that supports Markdown and describe what you would expect to see in Brightline.
+setup:
+  - A Brightline Notes workspace you can create notebooks in, or any Markdown editor if you are working through the course without one.
+acceptance_criteria:
+  - A notebook named Garden Day exists and the plan note is inside it, not in the Inbox.
+  - The note has a Tasks heading followed by at least four checklist items, one of them ticked.
+  - The note has a Budget heading followed by a bulleted list of at least three items.
+  - At least one word in the note is bold.
+  - The note carries the tags todo and budget.
+  - The write-up names the shortcut or slash menu entry used for headings, checklists and lists.
+  - The write-up says the note list shows a progress count of 1 of 4 (or the right count for the number of items).
+  - The write-up explains that a note has one notebook but can carry many tags.
+reference_walkthrough: |
+  **Part A.** Click **+** next to **Notebooks** in the sidebar, type Garden Day and press **Enter**.
+
+  **Part B.** With Garden Day open, click **New note** (or press **N** outside the editor), type the title and press **Enter**. Type `## Tasks` and a space for the heading. Type `[]` and a space for each checklist item, pressing **Enter** between items. Type `## Budget`, then `-` and a space for each cost. Select one word and press **Ctrl+B** (**Cmd+B** on a Mac), or wrap it in double asterisks. Tick the first checklist item. Click **Add tag** under the title and add todo and budget, or type them after a hash in the body.
+
+  **Part C.** A good write-up reads something like this: "I used ## for the headings, [] for the checklist and - for the budget list. The note list shows 1 of 4. The plan belongs to one project, so it lives in the Garden Day notebook, but todo and budget cut across projects, so they are tags."
+common_mistakes:
+  - Creating the note from the Inbox and forgetting to move it, so it is not in the Garden Day notebook.
+  - Using a dash instead of square brackets, which gives a bulleted list with nothing to tick.
+  - Making a Budget notebook instead of a budget tag, which splits the plan across two notebooks.
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

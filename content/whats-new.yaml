@@ -1,0 +1,9 @@
+# Shown once after an update. Newest first; the app shows the entry matching its own version.
+# Each entry: version (must equal the app version exactly), title, and optional `new` and `fixed` lists.
+- version: "0.1.0"
+  title: "First release of LMS Shell"
+  new:
+    - "A desktop learning app you can fork: courses are plain YAML files under content/courses, checked by tools/validate.py."
+    - "Lessons, quick checks, session checks, hands-on exercises and a final assessment, with a certificate when you pass."
+    - "A sample course, Getting started with Brightline Notes, shows every part of a course in action."
+  fixed: []

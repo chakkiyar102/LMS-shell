@@ -1,0 +1,38 @@
+id: s2-share-a-plan
+session: s2
+title: Share the plan and keep it safe
+minutes: 20
+brief: |
+  The garden day plan from session 1 is ready for other people. Share it with the right access, find it again with search, and take a copy out of Brightline. Then write up what you did.
+
+  **Part A: share (8 min).** Invite one person as an **Editor** who will help plan, and one as a **Commenter** who will only review the budget. Turn on **Link sharing** so the plan can go in a newsletter.
+
+  **Part B: find (5 min).** Write a single search that finds notes in the Garden Day notebook tagged todo that do not mention done. Run it and note what it returns.
+
+  **Part C: keep (7 min).** Change one line of the plan, then open **Version history** and restore the version from before your change. Export the plan as a PDF.
+
+  In your write-up, list each person and their access level and why, give your search exactly as you typed it, and say what happened to the version list when you restored.
+
+  If you do not have a Brightline Notes account, describe each step and what you would expect to see.
+setup:
+  - The Garden day plan note from the session 1 exercise, or any note you are happy to share.
+  - Two email addresses you may invite, such as your own second account or a colleague who agreed to help.
+acceptance_criteria:
+  - One person is invited as an Editor and one as a Commenter, and the write-up gives a reason for each level.
+  - Link sharing is on, and the write-up says the link gives view-only access.
+  - The search uses an in filter with the notebook name in quotes, a tag filter for todo, and a leading minus for done.
+  - The write-up says the restored text became a new version at the top and the later versions were kept.
+  - A PDF export of the plan exists.
+reference_walkthrough: |
+  **Part A.** Open the plan and click **Share**. Type the first address, pick **Editor** and click **Invite**. Repeat with the second address and **Commenter**. At the bottom of the panel, turn on **Link sharing** and copy the link. Anyone with it can view the note, and nobody can comment or edit through it.
+
+  **Part B.** Press **Ctrl+K** (**Cmd+K** on a Mac) and type `in:"Garden Day" tag:todo -done`. The quotes are needed because the notebook name has a space.
+
+  **Part C.** Edit a line, wait a few seconds, then open the note's menu and choose **Version history**. Click the version from before your edit and choose **Restore this version**. The restored text appears as the newest version, and your edit is still in the list below it. Then choose **Export** in the note's menu and pick **PDF**.
+common_mistakes:
+  - Giving the budget reviewer Editor access when Commenter is enough.
+  - Expecting the shared link to let people comment. Links are view-only, so invite commenters by email.
+  - Leaving the quotes off a notebook name that has a space, so the in filter matches only Garden.
+  - Thinking a restore deletes the later versions. They stay in the list.
+sources:
+  - { kind: internal, ref: "Brightline Notes is fictional; the behaviour described is defined by this sample course." }

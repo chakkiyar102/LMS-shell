@@ -1,0 +1,11 @@
+# The first-run app tour, shown full screen once after onboarding (and again whenever `version` goes up).
+# Paths are relative to content/courses, like a lesson's `video:` block.
+# version 0 is the stub: the app treats it as "no tour" and never blocks the learner on it.
+# To ship a tour, put the film under _shared/videos/, fill in duration_s and chapters, and set version to 1.
+version: 0
+title: Your course tour
+src: _shared/videos/app-tour.mp4
+poster: _shared/videos/app-tour.jpg
+captions: _shared/videos/app-tour.vtt
+duration_s: 0
+chapters: []
