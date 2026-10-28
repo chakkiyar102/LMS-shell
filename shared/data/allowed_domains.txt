@@ -1,0 +1,4 @@
+# Domains that are always accepted, checked before the disposable list.
+# One per line, lowercase. Lines starting with # are ignored. Add your own organisation here
+# if a disposable-list entry ever blocks it.
+brightline.example

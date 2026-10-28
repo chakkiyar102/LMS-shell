@@ -1,0 +1,9 @@
+target/
+ui/dist/
+dist/
+node_modules/
+.DS_Store
+src-tauri/gen/
+*.local.json
+# ui-check output
+tools/ui-check/out/

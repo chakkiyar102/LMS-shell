@@ -1,0 +1,5 @@
+[workspace]
+resolver = "2"
+members = ["shared", "src-tauri", "ui"]
+# ui is wasm-only; build it with trunk
+default-members = ["shared", "src-tauri"]
