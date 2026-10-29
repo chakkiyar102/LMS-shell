@@ -32,3 +32,5 @@ jobs:
             target/release/bundle/appimage/*.AppImage
             target/release/bundle/deb/*.deb
           if-no-files-found: error
+          # a week to download it by hand; keeping it longer only burns Actions storage
+          retention-days: 7
